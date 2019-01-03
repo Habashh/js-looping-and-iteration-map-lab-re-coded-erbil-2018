@@ -9,6 +9,10 @@ function lowerCaseDrivers (names) {
     const driverFirst = drivers.split(' ')[0];
     const driverLast = drivers.split(' ')[1];
 
-    return { firstName: driverFirst, lastName: driverLast };
-  });
+    return { firstName: driverFirst, lastName: driverLast };  });
+}
+function attributesToPhrase(drivers) {
+  return drivers.map(function (driver) {
+    return `${driver.name} is from ${driver.hometown}`;
+          });
 }
